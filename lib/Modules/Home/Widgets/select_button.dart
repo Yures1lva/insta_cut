@@ -9,9 +9,20 @@ class SelectButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       decoration: BoxDecoration(
         gradient: const LinearGradient(
-          colors: [Color(0xFFFF416C), Color(0xFFFF4B2B)],
+          end: Alignment.topLeft,
+          begin: Alignment.bottomRight,
+          colors: [
+            Color(0xFFD92AB2),
+            Color(0xFFF93392),
+            Color(0xFFFF367C),
+            Color(0xFFFE2087),
+            Color(0xFFFF4C61),
+            Color(0xFFF72440),
+            Color(0xFFFF8704),
+          ],
         ),
         borderRadius: BorderRadius.circular(12),
       ),
@@ -28,7 +39,8 @@ class SelectButton extends StatelessWidget {
         ),
         child: Text(
           label,
-          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          style: const TextStyle(
+              fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),
     );

@@ -19,7 +19,7 @@ class _HomeViewState extends State<HomeView> {
         (index) => VideoPart(
           id: index,
           isPosted: false,
-          thumbnail: 'https://via.placeholder.com/150', // imagem fictícia
+          thumbnail: 'https://via.placeholder.com/150',
         ),
       );
     });
@@ -42,14 +42,17 @@ class _HomeViewState extends State<HomeView> {
       backgroundColor: Colors.black,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(24.0),
+          padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 20),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "Corte. Poste.\nSimples assim",
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                    fontSize: 26,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w900),
               ),
               const SizedBox(height: 20),
               SelectButton(
