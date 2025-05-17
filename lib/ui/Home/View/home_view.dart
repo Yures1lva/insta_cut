@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:insta_cut/ui/Home/Models/video_part.dart';
 import 'package:insta_cut/ui/Home/Widgets/select_button.dart';
@@ -36,6 +38,11 @@ class _HomeViewState extends State<HomeView> {
     });
   }
 
+  void _handleVideoSelected(File video) {
+    // Aqui você chama o corte ou qualquer outra lógica depois
+    print('Vídeo selecionado: ${video.path}');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,12 +66,14 @@ class _HomeViewState extends State<HomeView> {
                 label: videoParts.isEmpty
                     ? "Selecione um vídeo"
                     : "Selecionar novamente",
-                onTap: handleVideoSelected,
+                onVideoSelected: _handleVideoSelected,
               ),
               const SizedBox(height: 20),
               Expanded(
                   child: VideoGrid(
-                      videoParts: videoParts, onVideoTap: togglePostStatus)),
+                videoParts: videoParts,
+                onVideoTap: togglePostStatus,
+              )),
               const SizedBox(height: 16),
               Text.rich(
                 TextSpan(
