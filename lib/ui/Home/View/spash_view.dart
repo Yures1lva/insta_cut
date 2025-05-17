@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:insta_cut/Modules/Home/View/home_view.dart';
+import 'package:insta_cut/ui/Home/View/home_view.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});

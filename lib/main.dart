@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:insta_cut/Modules/Home/View/spash_view.dart';
+import 'package:insta_cut/ui/Home/View/spash_view.dart';
 
 void main() {
   runApp(const MyApp());

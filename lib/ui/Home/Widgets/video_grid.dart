@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:insta_cut/Modules/Home/Models/video_part.dart';
+import 'package:insta_cut/ui/Home/Models/video_part.dart';
 
 class VideoGrid extends StatelessWidget {
   final List<VideoPart> videoParts;
@@ -14,7 +14,7 @@ class VideoGrid extends StatelessWidget {
         margin: const EdgeInsets.only(top: 30),
         child: Center(
             child: Text("Nenhum vídeo selecionado.",
-                style: TextStyle(color: Colors.white38))),
+                style: TextStyle(color: Colors.white60))),
       );
     }
 

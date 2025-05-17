@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:insta_cut/Modules/Home/Models/video_part.dart';
-import 'package:insta_cut/Modules/Home/Widgets/select_button.dart';
+import 'package:insta_cut/ui/Home/Models/video_part.dart';
+import 'package:insta_cut/ui/Home/Widgets/select_button.dart';
 import '../widgets/video_grid.dart';
 
 class HomeView extends StatefulWidget {
@@ -19,7 +19,7 @@ class _HomeViewState extends State<HomeView> {
         (index) => VideoPart(
           id: index,
           isPosted: false,
-          thumbnail: 'https://via.placeholder.com/150',
+          thumbnail: 'lib/assets/imgs/logo.png',
         ),
       );
     });
